@@ -34,6 +34,7 @@ ul li a {
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
     text-shadow: 2px 2px 2px lightblue;
+    transition: 0.2s;
 }
 
 ul li:hover a {
@@ -43,15 +44,31 @@ ul li:hover a {
     font-weight: 600;
 }
 
-ul li::first-line {
-    content: '';
-    position: absolute;
-    border-bottom: 2px solid maroon;
-    top: 10%;
+ul li:hover::before {
+    left: -5px;
+    color: black;
 }
 
-ul li:hover {
-    background-color: transparent;
+ul li::before {
+    content: '[';
+    font-size: 25px;
+    position: relative;
+    left: 5px;
+    transition: 0.5s;
+    color: transparent;
+}
+
+ul li::after {
+    content: ']';
+    position: relative;
+    left: 0px;
+    font-size: 25px;
+    transition: 0.5s;
+    color: transparent;
+}
+
+ul li:hover::after {
+    left: 6px;
     color: black;
 }
 
@@ -308,6 +325,8 @@ ul li:hover {
     margin: auto;
     width: 80%;
     background-color: #ddd;
+    border-radius: 2px;
+    box-shadow: 0px 0px 5px 0px black;
 }
 
 .skills {
@@ -318,6 +337,8 @@ ul li:hover {
     padding-right: 10px;
     padding-bottom: 10px;
     color: black;
+    border-radius: 2px;
+    box-shadow: 0px 0px 5px 0px black;
 }
 
 .html {
@@ -437,11 +458,7 @@ ul li:hover {
 .btn_foot::before {
     content: '';
     position: absolute;
-    height: 0;
-    width: 0;
-    left: 50%;
-    top: 50%;
-    background-color: #161f6d57;
+    background-color: transparent;
     transition: 0.2s;
 }
 
@@ -451,6 +468,7 @@ ul li:hover {
     left: 0%;
     top: 0%;
     border-radius: 4px;
+    box-shadow: 0px 0px 5px 0px gray;
 }
 
 .who i::before {
@@ -458,7 +476,7 @@ ul li:hover {
 }
 
 .who :hover i::before {
-    color: darkred;
+    color: indianred;
 }
 
 .skill i::before {
@@ -466,7 +484,7 @@ ul li:hover {
 }
 
 .skill :hover i::before {
-    color: darkred;
+    color: indianred;
 }
 
 .port i::before {
@@ -474,7 +492,7 @@ ul li:hover {
 }
 
 .port :hover i::before {
-    color: darkred;
+    color: indianred;
 }
 
 .resume i::before {
@@ -482,7 +500,7 @@ ul li:hover {
 }
 
 .resume :hover i::before {
-    color: darkred;
+    color: indianred;
 }
 
 .contact i::before {
@@ -490,5 +508,5 @@ ul li:hover {
 }
 
 .contact :hover i::before {
-    color: rgb(248, 29, 29);
+    color: indianred;
 }
